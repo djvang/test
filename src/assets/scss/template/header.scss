@@ -1,0 +1,93 @@
+header {
+  font-family: $roboto-cond;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  background: $dark-gray;
+  border-bottom: 1px solid $header_border;
+  max-height: 41px;
+
+  .logo {
+    position: absolute;
+    top: 6px;
+  }
+
+  .toolbar {
+    height: 41px;
+    padding-right: 25px;
+
+    &__item {
+      color: $gray;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 300;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .promotion {
+      color: $green;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .lang {
+
+    span {
+      cursor: pointer;
+    }
+
+    img {
+      width: 18px;
+    }
+
+    &__list {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 30px;
+      background: $dark-gray;
+      border: 1px solid $header_border;
+      border-top: none;
+
+      &.active {
+        display: block;
+      }
+
+      &-item {
+        display: block;
+        padding: 10px;
+        opacity: .6;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .bonus-tab {
+    display: none;
+    background: $dark-gray;
+
+    &__list {
+      padding: 25px 0 50px;
+
+      &-item {
+        width: 230px;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px 0 rgba(0,0,0,.25);
+      }
+    }
+
+    .close-btn-link {
+      margin-top: 15px;
+    }
+  }
+}

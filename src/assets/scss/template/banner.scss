@@ -1,0 +1,101 @@
+main {
+  padding-top: 41px;
+}
+
+.banner-wrap {
+  height: 400px;
+  background: url('../../images/big-background.jpg') 0 0;
+  background-size: cover;
+  font-family: $roboto-cond;
+
+  .form {
+    max-width: 370px;
+    width: 33.33333%;
+    padding-right: 25px;
+
+    &-heading {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      align-items: flex-end;
+
+      &-item {
+        width: 33%;
+        position: relative;
+
+        &:nth-child(1) {
+           h2 {
+             color: $wight;
+           }
+        }
+
+        &:nth-child(2) {
+
+          &:before, &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100px;
+            height: 1px;
+            background: $gray;
+            top: 11px;
+          }
+
+          &:before {
+            left: -50px;
+          }
+
+          &:after {
+            right: -52px;
+          }
+        }
+
+        img {
+          margin: auto
+        }
+
+        h2 {
+          margin: 4px 0 10px;
+          color: $gray;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 23px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    &-item {
+
+      input {
+        margin-bottom: 15px;
+
+        &:focus {
+          color: $green;
+        }
+      }
+
+      &-link {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        a {
+          font-size: 15px;
+          color: $gray;
+
+          &:hover {
+            color: $wight;
+          }
+        }
+      }
+
+      &.registration {
+
+        .form-item-link {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

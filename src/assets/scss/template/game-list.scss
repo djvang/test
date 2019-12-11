@@ -1,0 +1,196 @@
+.game-list {
+
+  .container-fluid {
+    padding: 45px 40px 30px;
+  }
+
+  .game-cell {
+    margin-bottom: 60px;
+    position: relative;
+    width: calc(100% / 6);
+    padding: 0 15px;
+  }
+
+  .game-block {
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    max-width: 280px;
+    min-width: 140px;
+    border-radius: 9px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .25);
+    position: relative;
+    z-index: 1;
+    height: 180px;
+
+    &:hover {
+      background: none !important;
+
+      .download-test {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .personal-entry {
+        top: 0;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .logo-entry {
+        bottom: 0;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .lets-play-block {
+        opacity: 1;
+        pointer-events: auto;
+
+        .top {
+          top: 0;
+        }
+
+        .bottom {
+          bottom: 0;
+        }
+      }
+    }
+
+    .download-test {
+      opacity: 0;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      transition: .5s;
+      border-radius: 9px;
+    }
+
+    .personal-entry {
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: block;
+      width: 100%;
+      position: absolute;
+      height: 100%;
+      z-index: 2;
+      top: -20px;
+      transition: .5s;
+    }
+
+    .logo-entry {
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: block;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      height: 100%;
+      z-index: 3;
+      bottom: -20px;
+      transition: .5s;
+    }
+
+    .lets-play-block {
+      pointer-events: none;
+      text-align: center;
+      opacity: 0;
+      justify-content: center;
+      overflow: hidden;
+      transition: .5s;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      .top {
+        position: absolute;
+        top: -30px;
+        left: 0;
+        color: #fff;
+        margin: 0;
+        font-weight: 700;
+        font-size: 14px;
+        transition: .5s;
+        padding: 8px 8px 0 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-family: Roboto, sans-serif;
+        width: 100%;
+        text-align: left;
+        text-transform: uppercase;
+      }
+
+      .bottom {
+        position: absolute;
+        bottom: -30px;
+        right: 0;
+        margin: 0;
+        font-family: Roboto, sans-serif;
+        color: $wight;
+        font-weight: 700;
+        z-index: 99;
+        cursor: pointer;
+        transition: .5s;
+        padding: 0 10px 5px 0;
+        text-transform: uppercase;
+      }
+
+      .play-btn {
+        display: block;
+        border-radius: 20px;
+        border: 2px solid $play-btn_border;
+        background: transparent;
+        color: $wight;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 3px 15px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        z-index: 100;
+        line-height: unset;
+        width: auto;
+        white-space: nowrap;
+        text-decoration: none;
+        text-transform: uppercase;
+        cursor: pointer;
+        align-self: center;
+
+        img {
+          width: 14px;
+          margin-right: 5px;
+          margin-bottom: 3px;
+        }
+
+        &:hover {
+          background: $play-btn_border;
+          cursor: pointer;
+          border-bottom: 2px solid $play-btn_border-color;
+          border-right: 2px solid transparent;
+          border-left: 2px solid transparent;
+        }
+      }
+    }
+  }
+}
+
+.hover-holder {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  top: -20px;
+  z-index: 99;
+}
+
+.hover-holder {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  bottom: -20px;
+  z-index: 99;
+  max-width: 280px;
+}
